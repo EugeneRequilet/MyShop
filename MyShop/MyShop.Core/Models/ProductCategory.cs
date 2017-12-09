@@ -9,17 +9,12 @@ using System.Threading.Tasks;
 
 namespace MyShop.Core.Models
 {
-    public class ProductCategory
+    public class ProductCategory : BaseEntity
     {
-        public string Id { get; set; }
+        // The Id is inherited from the BaseEntity Class
 
         [Required]
         [DisplayName("Category Description")]
         public string Category { get; set; }
-
-        public ProductCategory()
-        {
-            this.Id = Guid.NewGuid().ToString();
-        }
     }
 }
