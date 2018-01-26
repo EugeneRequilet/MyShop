@@ -69,7 +69,7 @@ namespace MyShop.Services
             return basket;
         }
 
-        public void AddTobasket(HttpContextBase httpContext, string productId)
+        public void AddToBasket(HttpContextBase httpContext, string productId)
         {
             Basket basket = GetBasket(httpContext, true);
             BasketItem item = basket.BasketItems.FirstOrDefault(i => i.ProductId == productId);
@@ -93,7 +93,7 @@ namespace MyShop.Services
             basketContext.Commit();
         }
 
-        public void RemovefromBasket(HttpContextBase httpContext, string itemId)
+        public void RemoveFromBasket(HttpContextBase httpContext, string itemId)
         {
             Basket basket = GetBasket(httpContext, true);
             BasketItem item = basket.BasketItems.FirstOrDefault(i => i.Id == itemId);
